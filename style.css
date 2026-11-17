@@ -1,0 +1,459 @@
+
+/* ==============================
+   1. GENERAL SETTINGS
+============================== */
+
+:root {
+    --cream: #f8f5ed;
+    --green: #233f32;
+    --orange: #bd6844;
+    --gold: #c59b52;
+    --dark: #242820;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--dark);
+    font-family: 'DM Sans', sans-serif;
+}
+
+
+/* ==============================
+   2. NAVIGATION BAR
+============================== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: var(--cream);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--green);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--orange);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--orange);
+}
+
+
+/* ==============================
+   3. HERO SECTION
+============================== */
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20, 35, 27, 0.92),
+            rgba(20, 35, 27, 0.25)
+        ),
+        url("https://images.unsplash.com/photo-1547592180-85f173990554?w=1600")
+        center/cover;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #e8bd78;
+}
+
+.hero-content > p:not(.eyebrow) {
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.main-button {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    padding: 14px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background: var(--gold);
+    transform: translateY(-3px);
+}
+
+
+/* ==============================
+   4. HERITAGE SECTION
+============================== */
+
+.heritage {
+    text-align: center;
+    padding: 90px 20%;
+}
+
+.heritage h2,
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: var(--green);
+    margin-bottom: 20px;
+}
+
+.heritage > p:last-child {
+    line-height: 1.9;
+    color: #666;
+}
+
+
+/* ==============================
+   5. EXPLORE SECTION
+============================== */
+
+.explore-section {
+    padding: 80px 8%;
+    background: #f0eadf;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading > p:last-child {
+    color: #777;
+}
+
+
+/* ==============================
+   6. SEARCH AND FILTER
+============================== */
+
+.search-area {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.search-area input,
+.search-area select {
+    padding: 14px;
+    border: 1px solid #d5cabb;
+    border-radius: 6px;
+    background: white;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.search-area input {
+    width: 300px;
+}
+
+.search-area select {
+    cursor: pointer;
+}
+
+
+/* ==============================
+   7. FOOD CARDS
+============================== */
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.food-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.food-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.food-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.food-card:hover img {
+    transform: scale(1.04);
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.card-content p:first-child {
+    color: var(--orange);
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.card-content h3 {
+    color: var(--green);
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.card-content p:last-child {
+    color: #777;
+    font-size: 13px;
+}
+
+.no-results {
+    display: none;
+    text-align: center;
+    padding: 30px;
+    color: #777;
+}
+
+
+/* ==============================
+   8. RECIPE POPUP
+============================== */
+
+.recipe-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.recipe-modal.active {
+    display: flex;
+}
+
+.recipe-box {
+    background: var(--cream);
+    width: 100%;
+    max-width: 750px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 12px;
+    position: relative;
+    animation: popupAppear 0.3s ease;
+}
+
+.recipe-box > img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    border: none;
+    background: var(--green);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background: var(--orange);
+}
+
+.recipe-details {
+    padding: 30px;
+}
+
+.recipe-details h2 {
+    color: var(--green);
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    margin: 10px 0;
+}
+
+.recipe-details > p {
+    line-height: 1.7;
+}
+
+.recipe-time {
+    margin-top: 15px;
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.recipe-details h3 {
+    color: var(--orange);
+    margin: 25px 0 12px;
+}
+
+.recipe-details li {
+    margin: 10px 0 10px 22px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   9. ANIMATIONS
+============================== */
+
+@keyframes popupAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==============================
+   10. FOOTER
+============================== */
+
+footer {
+    background: var(--green);
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+footer h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #ddd;
+    margin: 8px;
+}
+
+.copyright {
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+
+/* ==============================
+   11. MOBILE RESPONSIVENESS
+============================== */
+
+@media (max-width: 850px) {
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .heritage {
+        padding: 70px 10%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 50px 8%;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-area {
+        flex-direction: column;
+    }
+
+    .search-area input,
+    .search-area select {
+        width: 100%;
+    }
+
+    .heritage h2,
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+}

@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flavours of Heritage</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+        <a href="#" class="logo">Flavours <span>of Heritage.</span></a>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#explore">Explore</a>
+            <a href="#heritage">Our Heritage</a>
+        </div>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">A TASTE OF INDIA</p>
+
+            <h1>Every Dish Tells a <span>Story.</span></h1>
+
+            <p>
+                Discover India's culinary heritage through traditional
+                recipes, regional flavours and stories passed down
+                through generations.
+            </p>
+
+            <a href="#explore" class="main-button">Explore Recipes →</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- HERITAGE INTRODUCTION -->
+
+    <section class="heritage" id="heritage">
+
+        <p class="eyebrow">MORE THAN JUST FOOD</p>
+
+        <h2>Preserving the Flavours of Our Past</h2>
+
+        <p>
+            Indian cuisine is a beautiful collection of traditions,
+            ingredients and cooking techniques. Every region has
+            something unique to offer, and every recipe carries
+            a piece of history.
+        </p>
+
+    </section>
+
+
+    <!-- EXPLORE FOOD -->
+
+    <section class="explore-section" id="explore">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">THE COLLECTION</p>
+
+            <h2>Explore India's Flavours</h2>
+
+            <p>Find a dish. Discover its story. Learn its recipe.</p>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-area">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for a dish..."
+            >
+
+            <select id="regionFilter">
+
+                <option value="All">All Regions</option>
+                <option value="North India">North India</option>
+                <option value="South India">South India</option>
+                <option value="East India">East India</option>
+                <option value="West India">West India</option>
+                <option value="Central India">Central India</option>
+                <option value="Northeast India">Northeast India</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- FOOD CARDS ARE CREATED USING JAVASCRIPT -->
+
+        <div class="food-grid" id="foodGrid"></div>
+
+        <p id="noResults" class="no-results">
+            No dishes found. Try another search!
+        </p>
+
+    </section>
+
+
+    <!-- RECIPE POPUP -->
+
+    <div class="recipe-modal" id="recipeModal">
+
+        <div class="recipe-box">
+
+            <button class="close-btn" id="closeModal">×</button>
+
+            <img id="recipeImage" src="" alt="Traditional Indian dish">
+
+            <div class="recipe-details">
+
+                <p class="eyebrow" id="recipeRegion"></p>
+
+                <h2 id="recipeTitle"></h2>
+
+                <p id="recipeDescription"></p>
+
+                <p class="recipe-time" id="recipeTime"></p>
+
+                <h3>Ingredients</h3>
+
+                <ul id="recipeIngredients"></ul>
+
+                <h3>Cooking Instructions</h3>
+
+                <ol id="recipeInstructions"></ol>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>Flavours of Heritage.</h2>
+
+        <p>Celebrating India's food, culture and traditions.</p>
+
+        <p class="copyright">Made with ❤️ for our culinary heritage.</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
